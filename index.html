@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>keypourd speed</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="game">
+        <div class="name">typing speed test game</div>
+        <div class="conatiner">
+            <div class="messege">you are playing on
+                <span class="lvl">your level choose</span>level & you are have <span class="seconds">secound for the level</span>seound to type the word
+            </div>
+            <div class="start">start playing</div>
+            <div class="the-word"></div>
+            <input type="text" class="input" placeholder="enter the word">
+            <h3 class="des">choose the your level</h3>
+            <div class="choose-lvl">
+                <div class="level">
+                    <input id="eazy" type="radio" name="choose" data-inp="eazy">
+                    <label for="eazy">eazy (7) secound</label>
+                </div>
+                <div class="level">
+                    <input id="normal" type="radio" name="choose" checked data-inp="normal">
+                    <label for="normal">normal (5) secound</label>
+                </div>
+                <div class="level">
+                    <input id="hard" type="radio" name="choose" data-inp="hard">
+                    <label for="hard">hard (3) secound</label>
+                </div>
+            </div>
+            <div class="uploud-word">word will Show here</div>
+            <div class="control">
+                <div class="time">time left: <span></span> secounds</div>
+                <div class="score">score: <span class="got">0</span> from <span class="total"></span></div>
+            </div>
+            <div class="finnish"></div>
+            <div class="All-data"></div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
