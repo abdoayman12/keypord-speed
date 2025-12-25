@@ -75,11 +75,6 @@ if (localStorage.getItem("day") == null){
 }
 // setting add level and time left
 function addElement(wordes){
-    inputRadio.forEach((input)=>{
-        if (input.checked){
-            defaultLvl = input.dataset.inp;
-        }
-    })
     number++
     if (number == 1){
         defaultLevelSeconds += 3;
@@ -93,17 +88,24 @@ function addElement(wordes){
     scoreTotal.innerHTML = wordes.length;
 }
 let inputRadio = document.getElementsByName("choose");
-let defaultLvl;
-let defaultLevelSeconds;
+let defaultLvl = "normal";
+let defaultLevelSeconds = lvls[defaultLvl];
 let dataLocal;
+inputRadio.forEach((input) => {
+    input.addEventListener('change', function() {
+        defaultLvl = input.dataset.inp;
+    });
+});
 // disabled paste event
 wordInput.onpaste = function(){
     return false;
 }
 btnStart.addEventListener("click", function(){
-    if (defaultLvl == "normal"){
+    let conatiner = document.querySelector(".conatiner");
+    conatiner.classList.add("start_conatiner");
+    if (defaultLvl === "normal"){
         addElement(normalWord);
-    }else if (defaultLvl == "eazy"){
+    }else if (defaultLvl === "eazy"){
         addElement(eazyWord);
     }else{
         addElement(hardWord);

@@ -125,19 +125,9 @@ body{
     margin-bottom: 10px;
     width: 30%;
     gap: 10px;
+    z-index: 1000000;
 } 
-.choose-lvl .level{
-    margin: 0 auto;
-    font-weight: bold;
-}
-.choose-lvl .level:nth-child(2){
-    transform: translateX(7px);
-}
-.choose-lvl .level input,
-.choose-lvl .level label{
-    cursor: pointer;
-}
-.finnish{
+.start_conatiner .finnish{
     font-weight: bold;
     padding: 15px;
     font-size: 40px;
